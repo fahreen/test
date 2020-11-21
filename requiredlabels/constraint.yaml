@@ -1,0 +1,13 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sRequiredLabels
+metadata:
+  name: all-must-have-createdby-label
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Namespace", "Pod"]
+  parameters:
+    message: "All pods and namespaces must have an created-by label"
+    labels:
+      - key: "created-by"
