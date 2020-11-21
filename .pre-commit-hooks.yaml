@@ -1,0 +1,7 @@
+- id: test
+  args: []
+  description: test framework
+  entry: git-hook/test.py
+  language: python
+  name: Test
+  
